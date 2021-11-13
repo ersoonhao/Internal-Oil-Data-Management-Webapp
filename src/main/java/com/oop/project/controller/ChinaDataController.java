@@ -23,6 +23,7 @@ import com.oop.project.repository.ChinaDataRepository;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
+
 @RequestMapping("/api")
 public class ChinaDataController {
 
@@ -55,7 +56,7 @@ public class ChinaDataController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-
+    
 	@PostMapping("/chinaData")
 	public ResponseEntity<ChinaData> createExport(@RequestBody ChinaData chinaData) {
 		try {
