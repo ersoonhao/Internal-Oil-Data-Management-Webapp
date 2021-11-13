@@ -12,7 +12,7 @@ phases:
   build:
     commands:
       - mvn clean install deploy
-      - mv: target/project-0.0.1-SNAPSHOT.war ROOT.war
+      - mv target/project-0.0.1-SNAPSHOT.war ROOT.war
       # - mvn war:exploded
   post_build:
     commands:
