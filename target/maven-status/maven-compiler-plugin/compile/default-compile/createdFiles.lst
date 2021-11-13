@@ -1,0 +1,10 @@
+com\oop\project\controller\ChinaDataController.class
+com\oop\project\repository\NewZealandDataRepository.class
+com\oop\project\repository\ChinaDataRepository.class
+com\oop\project\Webscrape$1.class
+com\oop\project\controller\NewZealandDataController.class
+com\oop\project\Webscrape.class
+com\oop\project\Database.class
+com\oop\project\model\ChinaData.class
+com\oop\project\ProjectApplication.class
+com\oop\project\model\NewZealandData.class
