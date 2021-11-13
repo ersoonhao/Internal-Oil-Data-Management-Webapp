@@ -21,10 +21,10 @@ public class ProjectApplication extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) {
-        SpringApplication app=new SpringApplication(ProjectApplication.class);
-        // SpringApplication.run(ProjectApplication.class, args);
-        app.setDefaultProperties(Collections.singletonMap("server.port", "5000"));
-        app.run(args);
+        // SpringApplication app=new SpringApplication(ProjectApplication.class);
+        SpringApplication.run(ProjectApplication.class, args);
+        // app.setDefaultProperties(Collections.singletonMap("server.port", "5000"));
+        // app.run(args);
     }
 
    
