@@ -26,5 +26,5 @@ artifacts:
   files:
     - template-export.yml
     - template-configuration.json
-    -ROOT.WAR
-    -.ebextensions/**/*
+    - ROOT.WAR
+    - .ebextensions/**/*
