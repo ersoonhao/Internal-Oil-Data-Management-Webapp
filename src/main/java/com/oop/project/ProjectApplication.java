@@ -9,7 +9,7 @@ import java.util.Collections;
 
 @SpringBootApplication
 @EnableScheduling
-public class ProjectApplication {
+public class ProjectApplication extends *SpringBootServletInitializer* {
 	
 	public static void main(String[] args) {
         SpringApplication app = new SpringApplication(ProjectApplication.class);
