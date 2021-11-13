@@ -3,11 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto16
     commands:
       - pip install --upgrade awscli
   pre_build:
     commands:
+      -java -version
       - mvn clean compile test
   build:
     commands:
