@@ -11,8 +11,9 @@ phases:
       - mvn test
   build:
     commands:
-      - mvn install
-      - mvn war:exploded
+      - mvn clean install deploy
+       - mv target/project-0.0.1-SNAPSHOT.war ROOT.war
+      # - mvn war:exploded
   post_build:
     commands:
       - cp -r .ebextensions/ target/ROOT/
@@ -25,3 +26,5 @@ artifacts:
   files:
     - template-export.yml
     - template-configuration.json
+    -ROOT.WAR
+    -.ebextensions/**/*
