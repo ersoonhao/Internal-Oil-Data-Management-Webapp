@@ -13,12 +13,12 @@ phases:
     commands:
       - echo Entering Build Phase
       - mvn package
-      # - mv target/project-0.0.1-SNAPSHOT.war ROOT.war
+      # - mv target/ROOT.war ROOT.war
       - mvn war:exploded
   post_build:
     commands:
       - echo Entering Post Build
-      - mv target/ROOT
+      - mv target/ROOT .
       - cp -r .ebextensions/ target/ROOT/
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
 
