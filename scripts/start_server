@@ -1,1 +1,3 @@
-mvn spring-boot:run
+#!/bin/bash
+cd /opt/tomcat
+bin/startup.sh

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/tomcat
+
+mv /home/ec2-user/javaapp/ROOT.war webapps/
