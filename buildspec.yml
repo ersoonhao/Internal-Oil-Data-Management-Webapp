@@ -11,11 +11,14 @@ phases:
       - mvn test
   build:
     commands:
-      - mvn clean install 
-      - mv target/project-0.0.1-SNAPSHOT.war ROOT.war
-      # - mvn war:exploded
+      - echo Entering Build Phase
+      - mvn clean package
+      # - mv target/project-0.0.1-SNAPSHOT.war ROOT.war
+      - mvn war:exploded
   post_build:
     commands:
+      - echo Entering Post Build
+      -mv target/ROOT
       - cp -r .ebextensions/ target/ROOT/
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
 
@@ -26,5 +29,5 @@ artifacts:
   files:
     - template-export.yml
     - template-configuration.json
-    - ROOT.WAR
-    - .ebextensions/**/*
+    # - ROOT.WAR
+    # - .ebextensions/**/*
