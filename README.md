@@ -30,3 +30,4 @@ Step 6: This project's backend currently relies on our dedicated AWS RDS instanc
 The database endpoints can be modified in application.properties
 Uncomment the whole ScheduledTask.java as well as line 23 in ProjectApplication.java for the webscrappers to run on start up and periodically scrape the China and New Zealand oil data.
 
+Contributors: @nvTran @asher935
